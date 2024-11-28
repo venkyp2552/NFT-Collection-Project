@@ -12,10 +12,12 @@ contract MoodNft is ERC721 {
     string private s_sadSvgImageUri;
     string private s_happySvgImageUri;
     address private s_owner;
+
     enum Mood{
         HAPPY,
         SAD
     }
+    
     mapping(uint256=>Mood) private s_tokenIdToMood;
 
     constructor(string memory happySvgImageUri,string memory sadSvgImageUri)
